@@ -32,7 +32,7 @@ h6 {
   z-index: 9997;
   transition: all 0.5s;
   padding: 0 15px;
-  background: #040b14;
+  background: #08172b;
   overflow-y: auto;
 }
 
@@ -41,6 +41,7 @@ h6 {
   display: block;
   width: 120px;
   border: 8px solid #2c2f3f;
+  border-radius: 50%;
 }
 
 #header .profile h1 {
@@ -62,7 +63,7 @@ h6 {
 #header .profile .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #212431;
+  background: #040b14;
   color: #fff;
   line-height: 1;
   padding: 8px 0;
