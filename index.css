@@ -27,12 +27,11 @@ h6 {
   top: 0;
   left: 0;
   bottom: 0;
-  width: 250px;
+  width: 300px;
   transition: all ease-in-out 0.5s;
   z-index: 9997;
   transition: all 0.5s;
-  padding: 0 15px;
-  background: #08172b;
+  background: #01001f;
   overflow-y: auto;
   text-align: center;
   align-items: center;
@@ -62,26 +61,29 @@ h6 {
   text-decoration: none;
 }
 
-#header .profile .social-links a {
-  display: inline-block;
-  background: #040b14;
-  color: #fff;
-  line-height: 1;
-  padding: 0px;
-  margin-top: 20px;
-  margin-right: 4px;
-  align-items: center;
-  border-radius: 50%;
-  text-align: center;
-  width: 50px;
-  height: 50px;
-  transition: 0.3s;
+.social-links {
+  display: flex;
+  justify-content: center;
 }
 
-#header .profile .social-links a:hover {
-  background: #149ddd;
-  color: #fff;
-  text-decoration: none;
+.social-links a {
+  display: inline-block;
+  width: 60px; /* Increase width and height */
+  height: 60px; /* Increase width and height */
+  margin: 10px; 
+  overflow: hidden; 
+}
+
+.social-links img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 5px solid #2c2f3f;
+  object-fit: cover; /* Ensure the image maintains its aspect ratio */
+}
+
+.social-links img:hover {
+  filter: brightness(1.5);
 }
 
 #main {
@@ -89,7 +91,7 @@ h6 {
 }
 
 .nav-menu {
-  padding: 30px 0 0 0;
+  padding: 10px 0 0 0;
   text-align: center;
   align-items: center;
   align-content: center;
@@ -115,6 +117,7 @@ h6 {
 .nav-menu a:focus {
   display: flex;
   align-items: center;
+  justify-content: center;
   color: #a8a9b4;
   padding: 12px 15px;
   margin-bottom: 8px;
@@ -125,7 +128,6 @@ h6 {
 .nav-menu a i,
 .nav-menu a:focus i {
   font-size: 24px;
-  padding-right: 8px;
   color: #6f7180;
 }
 
@@ -134,7 +136,7 @@ h6 {
 .nav-menu .active:focus,
 .nav-menu li:hover>a {
   text-decoration: none;
-  color: #fff;
+  color: #a1f0ff;
 }
 
 .nav-menu a:hover i,
