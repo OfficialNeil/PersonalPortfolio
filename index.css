@@ -13,6 +13,10 @@ a:hover {
   text-decoration: none;
 }
 
+* {
+  scroll-behavior: smooth;
+}
+
 h1,
 h2,
 h3,
@@ -86,12 +90,6 @@ h6 {
   filter: brightness(1.3);
 }
 
-#main {
-  margin-left: 300px;
-  background-color: #020040;
-  overflow: auto;
-}
-
 .nav-menu {
   
   text-align: center;
@@ -115,8 +113,7 @@ h6 {
   align-items: center;
 }
 
-.nav-menu a,
-.nav-menu a:focus {
+.nav-menu a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -127,29 +124,38 @@ h6 {
   font-size: 15px;
 }
 
-.nav-menu a i,
-.nav-menu a:focus i {
-  font-size: 30px;
-  color: #6f7180;
-}
-
 .nav-menu a:hover,
-.nav-menu .active,
-.nav-menu .active:focus,
-.nav-menu li:hover>a {
+.nav-menu .active {
   text-decoration: none;
   color: #a1f0ff;
 }
 
-.nav-menu a:hover i,
-.nav-menu .active i,
-.nav-menu .active:focus i,
-.nav-menu li:hover>a i {
-  color: #149ddd;
-}
-
 #home {
   margin-left: 300px;
-  padding:1px 16px;
   height:1000px;
+  overflow: auto;
+}
+
+#about {
+  margin-left: 300px;
+  height:1000px;
+  overflow: auto;
+}
+
+#portfolio {
+  margin-left: 300px;
+  height:1000px;
+  overflow: auto;
+}
+
+#resume {
+  margin-left: 300px;
+  height:1000px;
+  overflow: auto;
+}
+
+#contact {
+  margin-left: 300px;
+  height:1000px;
+  overflow: auto;
 }
