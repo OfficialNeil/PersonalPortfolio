@@ -88,7 +88,8 @@ h6 {
 
 #main {
   margin-left: 300px;
-  background-color: #e1e4fc;
+  background-color: #020040;
+  overflow: auto;
 }
 
 .nav-menu {
@@ -145,4 +146,10 @@ h6 {
 .nav-menu .active:focus i,
 .nav-menu li:hover>a i {
   color: #149ddd;
+}
+
+#home {
+  margin-left: 300px;
+  padding:1px 16px;
+  height:1000px;
 }
