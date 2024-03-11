@@ -43,7 +43,7 @@ function updateText() {
   
   letterIndex += direction;
   
-  cursorElement.style.visibility = (direction === 1 && letterIndex < phrases[index].length) ? 'visible' : 'hidden';
+  cursorElement.style.visibility = true;
 }
 
 function startAnimation() {
@@ -61,6 +61,24 @@ document.addEventListener('DOMContentLoaded', function() {
     animatedImage.classList.add('animate');
     animatedText.classList.add('animate');
   });
+
+  window.addEventListener('scroll', function() {
+    const scrollTop = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.body.clientHeight;
+    const scrollPercentage = (scrollTop / (documentHeight - windowHeight)) * 100;
+  
+    const startColor = [37, 47, 87];
+    const endColor = [12, 11, 33];
+    const newColor = startColor.map((start, i) => {
+      const end = endColor[i];
+      return Math.round(start + (end - start) * (scrollPercentage / 100));
+    });
+  
+    document.body.style.backgroundColor = `rgb(${newColor.join(',')})`;
+  });
+  
+  
 
   
   
