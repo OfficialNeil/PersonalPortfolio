@@ -30,11 +30,10 @@ h6 {
   position: fixed;
   top: 0;
   left: 0;
-  bottom: 0;
   width: 300px;
+  height: 100%;
   transition: all ease-in-out 0.5s;
   z-index: 9997;
-  transition: all 0.5s;
   background: #01001f;
   overflow-y: auto;
   text-align: center;
@@ -130,10 +129,77 @@ h6 {
   color: #a1f0ff;
 }
 
-#home {
-  margin-left: 300px;
-  height:1000px;
+section {
+  background-color: #f2f2f2;
+  height: 1000px;
   overflow: auto;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+#home {
+  background-color: #f2f2f2;
+  padding: 50px;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+}
+
+.image-container {
+  margin-right: 20px;
+}
+
+.image-container img {
+  width: 500px;
+  border: 2px solid #000;
+}
+
+.text-container p {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.typing-animation {
+  white-space: nowrap;
+  overflow: hidden;
+  margin-top: 10px;
+  animation: typing 3s steps(30, end) infinite, blink-caret 0.75s step-end infinite;
+}
+
+.animated-content {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.animated-content.animate {
+  opacity: 1;
+}
+
+.animated-image {
+  transform: translateX(20px) rotate(5deg);
+  transition: transform 1s ease;
+}
+
+.animated-text {
+  transform: translateX(-20px) rotate(-5deg);
+  transition: transform 1s ease;
+}
+
+.animated-image.animate, .animated-text.animate {
+  transform: translateX(0) rotate(0);
 }
 
 #about {
