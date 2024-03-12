@@ -148,26 +148,18 @@ html, body {
   height: 100vh;
   width: 100%;
   padding-top: 10px;
+  text-align: center;
 }
 
 
 .container {
   display: flex;
   align-items: center;
-  flex: column;
   justify-content: center;
 }
 
-.content {
-  flex-direction: row;
-}
-
-.image-container {
-  margin-left: 20px;
-}
-
 .image-container img {
-  width: 700px;
+  width: 550px;
   border: 4px solid #ffffff;
 }
 
@@ -183,7 +175,6 @@ html, body {
   font-size: 40px;
   overflow: hidden;
   margin-top: 10px;
-  margin-right: 50px;
   animation: typing 3s steps(30, end) infinite, blink-caret 0.75s step-end infinite;
 }
 
