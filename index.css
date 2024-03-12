@@ -178,13 +178,13 @@ html, body {
 
 .text-container p {
   font-size: 40px;
-  color:white;
+  color:rgb(83, 83, 83);
   font-weight: bold;
 }
 
 .typing-animation {
   white-space: nowrap;
-  color:white;
+  color:rgb(83, 83, 83);
   font-size: 40px;
   overflow: hidden;
   margin-top: 10px;
