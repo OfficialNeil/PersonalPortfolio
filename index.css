@@ -156,15 +156,18 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  margin-left: 300px;
 }
 
 .image-container img {
   width: 550px;
   border: 4px solid #ffffff;
+  margin-bottom: 5px;
 }
 
 .text-container p {
-  font-size: 40px;
+  font-size: 60px;
   color:rgb(83, 83, 83);
   font-weight: bold;
 }
@@ -172,10 +175,22 @@ html, body {
 .typing-animation {
   white-space: nowrap;
   color:rgb(83, 83, 83);
-  font-size: 40px;
+  font-size: 60px;
   overflow: hidden;
-  margin-top: 10px;
+  margin-top: 5px;
   animation: typing 3s steps(30, end) infinite, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+#cursor {
+  display: inline-block;
+  vertical-align: middle;
+  animation: blink .35s step-end infinite;
 }
 
 .animated-content {
