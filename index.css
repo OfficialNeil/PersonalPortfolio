@@ -130,12 +130,40 @@ h6 {
 }
 
 section {
-  height: 100%;
-  --color: #ffffff56;
-  background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
-      linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
-  background-size: 55px 55px;
-  margin-left: 300x;
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.section-bg {
+  background: #f5f8fd;
+}
+
+.section-title {
+  padding-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #173b6c;
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #149ddd;
+  bottom: 0;
+  left: 0;
+}
+
+.section-title p {
+  margin-bottom: 0;
 }
 
 html, body {
@@ -147,36 +175,58 @@ html, body {
 #home {
   height: 100vh;
   width: 100%;
-  padding-top: 10px;
+  padding-top: .00000001px;
   text-align: center;
-
-  border-bottom: 20px solid #ffffff56;
 }
 
+.background-image {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: url('img/homepfp.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity to your preference */
+  z-index: 1; /* Set a lower z-index to position it behind the text boxes */
+}
 
 .container {
+  position: relative; /* Ensure relative positioning for absolute children */
+  z-index: 2; /* Ensure content appears above the overlay */
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  margin-left: 300px;
+  height: 100%;
+  text-align: center; /* Center align text */
 }
 
-.image-container img {
-  width: 550px;
-  border: 4px solid #ffffff;
-  margin-bottom: 5px;
+.text-container {
+  position: absolute;
+  z-index: 3; /* Higher value than the overlay */
+  text-align: center;
+  color: #fff; /* Ensure text is visible */
+  width: 100%; /* Ensure text spans full width */
+  top: 50%; /* Position text at the vertical center */
+  transform: translateY(-50%); /* Adjust to perfectly center vertically */
 }
 
 .text-container p {
   font-size: 60px;
-  color:rgb(83, 83, 83);
+  color: rgb(255, 255, 255); /* White text color */
   font-weight: bold;
 }
 
 .typing-animation {
   white-space: nowrap;
-  color:rgb(83, 83, 83);
   font-size: 20px;
   overflow: hidden;
   margin-top: 0px;
@@ -184,7 +234,7 @@ html, body {
 }
 
 .typing-animation h1 {
-  color:rgb(83, 83, 83);
+  color: rgb(255, 255, 255); /* White text color */
   text-align: center;
   font-family: Lato, sans-serif;
   font-weight: 700;
@@ -212,12 +262,11 @@ html, body {
   38.9047%, 44.3419% { content: "student"; }
 
   54.6977%, 75.2093% { content: ""; }
-  55.8372%, 74.0698% { content: "r"; }
-  56.9767%, 72.9302% { content: "re"; }
-  58.1163%, 71.7907% { content: "rea"; }
-  59.2558%, 70.6512% { content: "read"; }
-  60.3953%, 69.5116% { content: "reade"; }
-  61.5349%, 68.3721% { content: "reader"; }
+  55.8372%, 74.0698% { content: "t"; }
+  56.9767%, 72.9302% { content: "tu"; }
+  58.1163%, 71.7907% { content: "tut"; }
+  59.2558%, 70.6512% { content: "tuto"; }
+  60.3953%, 69.5116% { content: "tutor"; }
 
   78.6279%, 96.8605% { content: ""; }
   79.7674%, 95.7209% { content: "c"; }
@@ -258,9 +307,9 @@ html, body {
   
   @keyframes sequencePopup {
     0%, 100% { content: "developer"; }
-    25% { content: "writer"; }
-    50% { content: "reader"; }
-    75% { content: "human"; }
+    25% { content: "student"; }
+    50% { content: "tutor"; }
+    75% { content: "coder"; }
   }
 
   .typewriter::before {
@@ -293,29 +342,44 @@ html, body {
 }
 
 #about {
-  padding: 50px;
-  color:rgb(83, 83, 83);
   height: 100vh;
-  display: flex;
-  align-items: center; 
-  justify-content: center; 
-
-  border-bottom: 20px solid #ffffff56;
+  margin-left:300px;
 }
 
-.container1 {
+.about .content h3 {
+  font-weight: 700;
+  font-size: 26px;
+  color: #173b6c;
+}
+
+.about img{
+  width: 100px;
+}
+
+.about .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about .content ul li {
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin-left: 300px;
 }
 
-.aboutMe p {
-  font-size: 30px;
-  color:rgb(83, 83, 83);
-  font-weight: bold;
-  margin-right: 400px;
+.about .content ul strong {
+  margin-right: 10px;
+}
+
+.about .content ul i {
+  font-size: 16px;
+  margin-right: 5px;
+  color: #149ddd;
+  line-height: 0;
+}
+
+.about .content p:last-child {
+  margin-bottom: 0;
 }
 
 #portfolio {
@@ -325,8 +389,6 @@ html, body {
   display: flex;
   align-items: center; 
   justify-content: center; 
-
-  border-bottom: 20px solid #ffffff56;
 }
 
 #resume {
@@ -337,7 +399,6 @@ html, body {
   align-items: center; 
   justify-content: center; 
 
-  border-bottom: 20px solid #ffffff56;
 }
 
 #contact {
