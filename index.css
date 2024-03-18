@@ -180,48 +180,41 @@ html, body {
 }
 
 .background-image {
-  position: relative;
   height: 100vh;
   width: 100%;
-  background-image: url('img/homepfp.jpg');
+  background-image: url('img/blue.jpg');
   background-size: cover;
   background-position: center;
   z-index: 0;
 }
 
 .overlay {
-  position: absolute;
   top: 0;
   left: 0;
   height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity to your preference */
-  z-index: 1; /* Set a lower z-index to position it behind the text boxes */
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
 .container {
-  position: relative; /* Ensure relative positioning for absolute children */
-  z-index: 2; /* Ensure content appears above the overlay */
+  z-index: 2;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   height: 100%;
-  text-align: center; /* Center align text */
 }
 
 .text-container {
   position: absolute;
-  z-index: 3; /* Higher value than the overlay */
-  text-align: center;
-  color: #fff; /* Ensure text is visible */
-  width: 100%; /* Ensure text spans full width */
-  top: 50%; /* Position text at the vertical center */
-  transform: translateY(-50%); /* Adjust to perfectly center vertically */
+  z-index: 3;
+  color: #fff;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .text-container p {
   font-size: 60px;
-  color: rgb(255, 255, 255); /* White text color */
+  color: rgb(255, 255, 255);
   font-weight: bold;
 }
 
@@ -234,7 +227,7 @@ html, body {
 }
 
 .typing-animation h1 {
-  color: rgb(255, 255, 255); /* White text color */
+  color: rgb(255, 255, 255);
   text-align: center;
   font-family: Lato, sans-serif;
   font-weight: 700;
