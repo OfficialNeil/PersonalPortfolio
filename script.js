@@ -29,7 +29,6 @@ document.addEventListener('DOMContentLoaded', function() {
     let animatedText = document.querySelector('.animated-text');
     
     animatedContent.classList.add('animate');
-    animatedImage.classList.add('animate');
     animatedText.classList.add('animate');
   });
 
