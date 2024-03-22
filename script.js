@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
     let animatedContent = document.querySelector('.animated-content');
-    let animatedImage = document.querySelector('.animated-image');
     let animatedText = document.querySelector('.animated-text');
     
     animatedContent.classList.add('animate');
