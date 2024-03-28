@@ -360,8 +360,10 @@ html, body {
 }
 
 .about img {
-  width: 450px;
-  float: left;
+  width: 100%;
+  max-width: 400px;
+  margin-right: 20px;
+  padding-left: 20px;
 }
 
 .about .content h3 {
@@ -402,6 +404,7 @@ html, body {
 .about .container {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 .about .row {
   display: flex;
@@ -419,11 +422,54 @@ html, body {
   margin-right: 5px;
 }
 
-#resume {
-  padding: 50px;
-  margin-left: 300px;
-  color:rgb(83, 83, 83);
+.about .col-lg-4 img,
+.about .col-lg-8 {
+  opacity: 0;
+  transform: translateX(-50px);
 }
+
+.about .col-lg-4 img {
+  animation: fadeInLeft 1s ease forwards;
+}
+
+.about .col-lg-8 {
+  animation: fadeInRight 1s ease forwards;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+#resume {
+  margin-left: 300px;
+  display: flex;
+}
+
+.resume .resume-title h2 {
+  padding-left: 20px;
+  margin-right: 30px;
+  margin-bottom: 50px;
+  align-self: flex-start;
+}
+
 .resume .resume-title {
   font-size: 26px;
   font-weight: 700;

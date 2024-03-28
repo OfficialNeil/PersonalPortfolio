@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-    let sections = document.querySelectorAll('section');
-    let navLinks = document.querySelectorAll('header nav a');
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('header nav a');
 
-    document.addEventListener('scroll', function() {
-        let scrollPosition = window.scrollY;
+    function makeLinkActive() {
+        let scrollPosition = window.scrollY + 100;
 
         sections.forEach(sec => {
             const secTop = sec.offsetTop;
@@ -19,8 +19,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         });
-    });
+    }
+
+    makeLinkActive();
+
+    document.addEventListener('scroll', makeLinkActive);
 });
+
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -46,6 +51,8 @@ document.addEventListener('DOMContentLoaded', function() {
   
     document.body.style.backgroundColor = `rgb(${newColor.join(',')})`;
   });
+
+  
   
   
 
