@@ -177,28 +177,18 @@
   
           <div class="section-title">
             <h2>Contact</h2>
-            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+            <p></p>
           </div>
-          
-          <form class="contactform" method="post" action="">
-            <h1>Contact Form</h1>
-            <div class="fields">
-              <label for="email">
-                <i class="fas fa-envelope"></i>
-                <input id="email" type="email" name="email" placeholder="Your Email" required>
-              </label>
-              <label for="name">
-                <i class="fas fa-user"></i>
-                <input type="text" name="name" placeholder="Your Name" required>
-              <label>
-              <input type="text" name="subject" placeholder="Subject" required>
-              <textarea name="msg" placeholder="Message" required></textarea>
-            </div>
-            <input type="submit">
-          </form>
 
+          <div class="containerForm">
+            <h2>Get in Touch</h2>
+		        <form onsubmit="emailSend(); reset(); return false;">
+			        <input type="text" id="name" placeholder="name" name="name" required>
+			        <input type="email" id="email" placeholder="email" name="email" required>
+              <input type="message" id="message" placeholder="message" name="message" required>
+			        <button type="submit" class="btn">submit</button>
+		        </form>
           </div>
-  
         </div>
       </section>
       <script src="script.js"></script>  

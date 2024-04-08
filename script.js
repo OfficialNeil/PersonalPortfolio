@@ -52,6 +52,34 @@ document.addEventListener('DOMContentLoaded', function() {
     document.body.style.backgroundColor = `rgb(${newColor.join(',')})`;
   });
 
+  function emailSend(){
+
+	var userName = document.getElementById('name').value;
+	var message = document.getElementById('message').value;
+	var email = document.getElementById('email').value;
+
+	var messageBody = "Name " + userName +
+	"<br/> Message " + message +
+	"<br/> Email " + email;
+	Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "neil7221@gmail.com",
+    Password : "7AAB8DD44FE7D7D6500009CF4DFB07860E97",
+    To : 'neil7221@gmail.com',
+    From : "neil7221@gmail.com",
+    Subject : "This is the subject",
+    Body : messageBody
+}).then(
+  message => {
+  	if(message=='OK'){
+  		swal("Secussful", "You clicked the button!", "success");
+  	}
+  	else{
+  		swal("Error", "You clicked the button!", "error");
+  	}
+  }
+);
+}
   
   
   
