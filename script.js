@@ -80,12 +80,23 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 );
 }
-  
-  
-  
 
-  
-  
-  
-  
-  
+document.addEventListener("DOMContentLoaded", function () {
+  const openPopupLinks = document.querySelectorAll('.openPopup');
+  const closePopupButtons = document.querySelectorAll('.popup .close');
+
+  openPopupLinks.forEach(link => {
+    link.addEventListener('click', function (event) {
+      event.preventDefault();
+      const popup = this.closest('.portfolioItem').querySelector('.popup');
+      popup.style.display = 'block';
+    });
+  });
+
+  closePopupButtons.forEach(button => {
+    button.addEventListener('click', function () {
+      const popup = this.closest('.popup');
+      popup.style.display = 'none';
+    });
+  });
+});
