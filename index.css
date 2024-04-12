@@ -468,7 +468,7 @@ html, body {
 }
 
 .resume .section-title {
-  padding-left: 20px;
+  padding-left: 10px;
   margin-right: 30px;
   padding-bottom: 0px;
   align-self: flex-start; /* Align the title to the start of the flex container */
@@ -548,12 +548,27 @@ html, body {
 }
 
 #portfolio {
-  padding: 50px;
-  color:rgb(83, 83, 83);
-  height: 100vh;
+  margin-left: 300px;
   display: flex;
-  align-items: center; 
-  justify-content: center; 
+  flex-direction: column; /* Stack items vertically */
+  align-items: flex-start; /* Align items to the start of the cross axis (left) */
+}
+
+.portfolio .section-title {
+  padding-left: 20px;
+  margin-right: 30px;
+  align-self: flex-start; /* Align the title to the start of the flex container */
+}
+
+.portfolio p{
+  text-align: center;
+}
+
+.portfolio .container {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: flex-start; /* Align items to the start of the cross axis (left) */
+  margin: 0 10px;
 }
 
 #contact {
