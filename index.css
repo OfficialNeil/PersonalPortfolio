@@ -695,51 +695,63 @@ html, body {
 #contact {
   margin-left: 300px;
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  align-items: flex-start; /* Align items to the start of the cross axis (left) */
+  flex-direction: column; /* Center items horizontally */
 }
 
 .contact .section-title {
   padding-left: 20px;
   margin-right: 30px;
   margin-bottom: 10px;
-  align-self: flex-start; /* Align the title to the start of the flex container */
+  align-self: flex-start;
 }
 
 .contact .container {
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  align-items: flex-start; /* Align items to the start of the cross axis (left) */
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
   margin: 0 10px;
 }
 
-.containerForm{
-	width: 350px;
-	background-color: white;
-	border-radius: 5px;
-	padding: 20px;
-	text-align: center;
-  align-items: center;
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center form elements horizontally */
+  max-width: 400px; /* Adjust width as needed */
+  width: 100%;
+  padding: 20px;
+  border: 2px solid #149ddd; /* Add border */
+  border-radius: 10px; /* Add border radius */
+  background-color: #f5f5f5; /* Light background color */
+  margin-bottom: 20px;
 }
-.containerForm input{
-	width: 100%;
-	padding: 10px;
-	border: none;
-	border-bottom: 2px solid #777777;
-	margin-bottom: 20px;
-	font-size: 16px;
-	outline: none;
+
+.contact form input,
+.contact form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
 }
-.btn{
-	border: none !important;
-	cursor: pointer;
-	background-color: #32cd9c;
-	margin: 15px 0;
-	font-size: 16px;
-	width: 100%;
-	padding: 14px;
+
+#contact button[type="submit"] {
+  background-color: #149ddd;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
-.btn:hover{
-	background-color: #1f7d5f;
-	color: white;
+
+#contact button[type="submit"]:hover {
+  background-color: #37b3ed;
+}
+
+#contact .form-line {
+  width: 100%;
+  border-bottom: 2px solid #149ddd;
+  margin-bottom: 20px;
 }
