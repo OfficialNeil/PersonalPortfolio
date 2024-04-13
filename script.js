@@ -47,7 +47,7 @@ window.addEventListener('scroll', function() {
   const newColor = startColor.map((start, i) => {
     const end = endColor[i];
     return Math.round(start + (end - start) * (scrollPercentage / 100));
-  });
+  })
 
   document.body.style.backgroundColor = `rgb(${newColor.join(',')})`;
 });

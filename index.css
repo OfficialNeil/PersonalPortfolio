@@ -609,13 +609,13 @@ html, body {
 .portfolio .popup {
   display: none;
   position: fixed;
-  top: 100px;
-  left: 50%;
+  top: 50px;
+  left: 60%;
   transform: translateX(-50%);
   z-index: 9999;
   width: 80%;
   max-width: 800px;
-  background-color: #fff;
+  background-color: #b2c4db;
   padding: 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
@@ -646,9 +646,10 @@ html, body {
 
 .portfolio .popupContent .close {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 5px;
+  right: 5px;
   cursor: pointer;
+  font-size: 40px;
 }
 
 
