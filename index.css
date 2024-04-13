@@ -424,42 +424,6 @@ html, body {
   margin-right: 5px;
 }
 
-.about .col-lg-4 img,
-.about .col-lg-8 {
-  opacity: 0;
-  transform: translateX(-50px);
-}
-
-.about .col-lg-4 img {
-  animation: fadeInLeft 1s ease forwards;
-}
-
-.about .col-lg-8 {
-  animation: fadeInRight 1s ease forwards;
-}
-
-@keyframes fadeInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
 #resume {
   margin-left: 300px;
   display: flex;
@@ -592,18 +556,14 @@ html, body {
 }
 
 .portfolioItemContent:hover {
-  transform: scale(1.1); /* Increase the size of the box on hover */
+  transform: scale(1.05); /* Increase the size of the box on hover */
 }
 
 .portfolioItemContent h3 {
   position: absolute;
-  top: 10px; /* Adjust the top spacing as needed */
-  left: 50%;
-  transform: translateX(-50%);
-  color: #000; /* Black text color */
-  background-color: #fff; /* White background */
-  padding: 10px; /* Adjust padding as needed */
-  border-radius: 10px; /* Add rounded corners */
+  top: 10px;
+  left: 10px;
+  color: #fff;
   text-align: center;
 }
 
@@ -646,45 +606,49 @@ html, body {
   font-size: 18px;
 }
 
-.popup {
+.portfolio .popup {
   display: none;
   position: fixed;
-  top: 50%;
+  top: 100px;
   left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
+  transform: translateX(-50%);
+  z-index: 9999;
+  width: 80%;
+  max-width: 800px;
+  background-color: #fff;
   padding: 20px;
-  border: 1px solid #ccc;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  z-index: 99999; /* Increased z-index value */
-  overflow: auto;
-  width: 500px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-.popupContent img {
-  width: 300px;
-  height: 200px;
-  align-items: center;
+.portfolio .popupContent {
+  text-align: center;
 }
 
-.popupContent ul {
+.portfolio .popupContent img {
+  width: 600px;
+  height: 400px;
+  margin-bottom: 20px;
+}
+
+.portfolio .popupContent p {
+  margin-bottom: 20px;
+}
+
+.portfolio .popupContent ul {
   list-style-type: none;
   padding: 0;
-  display: flex;
-  flex-direction: row;
 }
 
-.popupContent ul li {
-  margin-bottom: 5px;
+.portfolio .popupContent ul li {
+  display: inline;
+  margin-right: 10px;
 }
 
-.popupContent .close {
+.portfolio .popupContent .close {
   position: absolute;
   top: 10px;
   right: 10px;
   cursor: pointer;
-  font-size: 24px;
-  color: #888;
 }
 
 
