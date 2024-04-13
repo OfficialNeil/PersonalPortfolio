@@ -592,7 +592,7 @@ html, body {
 }
 
 .portfolioItemContent:hover {
-  transform: scale(1.02); /* Increase the size of the box on hover */
+  transform: scale(1.1); /* Increase the size of the box on hover */
 }
 
 .portfolioItemContent h3 {
@@ -646,50 +646,45 @@ html, body {
   font-size: 18px;
 }
 
-.portfolio .popup {
+.popup {
   display: none;
   position: fixed;
-  top: 50%; /* Position the popup vertically at 50% of the viewport */
-  left: 50%; /* Position the popup horizontally at 50% of the viewport */
-  transform: translate(-50%, -50%); /* Use transform to center the popup */
-  z-index: 9999;
-  width: 80%;
-  max-width: 800px;
-  background-color: #bfcdde;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
   padding: 20px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  z-index: 99999; /* Increased z-index value */
+  overflow: auto;
+  width: 500px;
 }
 
-.portfolio .popupContent {
-  text-align: center;
+.popupContent img {
+  width: 300px;
+  height: 200px;
+  align-items: center;
 }
 
-.portfolio .popupContent img {
-  width: 600px;
-  height: 400px;
-  margin-bottom: 20px;
-}
-
-.portfolio .popupContent p {
-  margin-bottom: 20px;
-}
-
-.portfolio .popupContent ul {
+.popupContent ul {
   list-style-type: none;
   padding: 0;
+  display: flex;
+  flex-direction: row;
 }
 
-.portfolio .popupContent ul li {
-  display: inline;
-  margin-right: 10px;
+.popupContent ul li {
+  margin-bottom: 5px;
 }
 
-.portfolio .popupContent .close {
+.popupContent .close {
   position: absolute;
   top: 10px;
   right: 10px;
   cursor: pointer;
-  font-size: 40px;
+  font-size: 24px;
+  color: #888;
 }
 
 
