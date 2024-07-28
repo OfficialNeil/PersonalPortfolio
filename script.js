@@ -71,3 +71,37 @@ closePopupButtons.forEach(button => {
   });
 });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const navToggle = document.getElementById('nav-toggle');
+  const header = document.getElementById('header');
+  const navbar = document.getElementById('navbar');
+
+  navToggle.addEventListener('click', function() {
+    header.classList.toggle('active');
+    navbar.classList.toggle('active');
+  });
+
+  // Function to check if the user is on a mobile device
+  function isMobileDevice() {
+    return window.innerWidth <= 768;
+  }
+
+  // Only show the toggle button if the user is on a mobile device
+  if (isMobileDevice()) {
+    navToggle.style.display = 'block';
+  } else {
+    navToggle.style.display = 'none';
+  }
+
+  // Handle window resize
+  window.addEventListener('resize', function() {
+    if (isMobileDevice()) {
+      navToggle.style.display = 'block';
+    } else {
+      navToggle.style.display = 'none';
+      header.classList.remove('active');
+      navbar.classList.remove('active');
+    }
+  });
+});
