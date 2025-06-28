@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #111111;
+  --bg-tertiary: #1a1a1a;
+  --bg-card: #1e1e1e;
+  --bg-hover: #252525;
+  --text-primary: #ffffff;
+  --text-secondary: #b3b3b3;
+  --text-muted: #666666;
+  --accent: #333333;
+  --border: #2a2a2a;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  @apply bg-[#0a0a0a] text-white font-sans antialiased;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  @apply mx-auto px-4 sm:px-6 lg:px-8;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.gradient-text {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-300 to-gray-500;
+}
+
+.nav-link {
+  @apply cursor-pointer text-gray-400 hover:text-white transition-all duration-300 relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 50%;
+  background: linear-gradient(90deg, #ffffff, #888888);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  @apply text-white font-medium;
+}
+
+.btn-primary {
+  @apply bg-white text-black hover:bg-gray-200 font-semibold py-3 px-6 sm:px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-sm sm:text-base;
+}
+
+.btn-secondary {
+  @apply border-2 border-gray-600 text-white hover:bg-white hover:text-black font-semibold py-3 px-6 sm:px-8 rounded-lg transition-all duration-300 transform hover:scale-105 text-sm sm:text-base;
+}
+
+.section-title {
+  @apply text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 gradient-text text-center;
+}
+
+.card {
+  @apply bg-[#1e1e1e] border border-[#2a2a2a] rounded-xl p-4 sm:p-6 hover:bg-[#252525] transition-all duration-300 hover:border-gray-600 hover:shadow-2xl hover:shadow-black/50;
+}
+
+.skill-badge {
+  @apply px-3 py-1 sm:px-4 sm:py-2 bg-[#2a2a2a] text-gray-300 rounded-full text-xs sm:text-sm font-medium border border-[#333333] hover:bg-[#333333] hover:text-white transition-all duration-300;
+}
+
+/* Glowing effects */
+.glow {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.glow-hover:hover {
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555555;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); }
+  50% { box-shadow: 0 0 40px rgba(255, 255, 255, 0.2); }
+}
+
+@keyframes blink {
+  0%, 50% { border-right-color: #ffffff; }
+  51%, 100% { border-right-color: transparent; }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Grid pattern background */
+.grid-bg {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Responsive text sizes */
+@media (max-width: 640px) {
+  .section-title {
+    @apply text-2xl;
+  }
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
